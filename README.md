@@ -12,5 +12,4 @@ I am learning web development and building my skills step by step.
 - Track my progress through regular commits.
 
 ## Projects
-My projects will be added here as I learn.# my-portfolio
-My personal portfolio website as a Software Enginnering student
+My projects will be added here as I learn.
