@@ -6,7 +6,7 @@ Hello! I am a Software Engineering student.
 I am learning web development and building my skills step by step.
 
 ## Goals
-- Learn HTML and CSS.
+- Learn HTML,CSS and Java script .
 - Build my first personal website.
 - Practice Git and GitHub.
 - Track my progress through regular commits.
