@@ -76,12 +76,27 @@
             header h1 { font-size: 1.9rem; }
             section { padding: 16px; }
         }
+        
+nav {
+    background: #134e4a;
+    padding: 12px;
+    text-align: center;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 12px;
+}
+nav a:hover {
+    color: #99f6e4;
+}
+
     </style>
 </head>
 
 <body>
 
-    <header>
+<header id="home">
         <h1>👋 Hello, World!</h1>
         <h2>I'm Yordanos Mesfin</h2>
         <p><strong>Software Engineering Student | Future Developer</strong></p>
@@ -93,8 +108,15 @@
         </p>
     </header>
 
+<nav aria-label="Main navigation">
+    <a href="#home">Home</a>
+    <a href="#story">My Story</a>
+    <a href="#toolkit">Toolkit</a>
+    <a href="#goals">My Goals</a>
+</nav>
+
     <main>
-        <section>
+        <section id="story">
             <h2>🌱 My Story</h2>
             <p>
                 I'm a Software Engineering student who believes
@@ -115,7 +137,7 @@
             </p>
         </section>
 
-        <section>
+        <section id="goals">
             <h2>🎯 My Goals</h2>
             <ul>
                 <li>Become a skilled software developer.</li>
