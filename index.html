@@ -16,41 +16,45 @@
         }
 
     
+
 header {
-    background:
-        radial-gradient(circle at top right, #115e59, transparent 55%),
-        #0b1220;
-    color: #e2e8f0;
-    text-align: left;
-    padding: 100px 12%;
-    min-height: 350px;
+    background: linear-gradient(135deg, #0f172a, #115e59);
+    color: white;
+    text-align: center;
+    padding: 75px 20px;
 }
 
 header h1 {
-    font-size: 3.2rem;
-    margin-bottom: 15px;
+    font-size: 2.8rem;
+    margin-bottom: 10px;
 }
 
 header h2 {
+    margin-top: 5px;
     color: #5eead4;
-    margin-top: 10px;
 }
 
 header p {
-    max-width: 650px;
-    margin: 15px 0;
-    color: #cbd5e1;
-    font-size: 17px;
+    color: #ccfbf1;
 }
 
-header a {
-    color: #5eead4;
-}
-header {
-    padding: 65px 7%;
+header .hero-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 22px;
+    background: #5eead4;
+    color: #0f172a;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: 0.3s ease;
 }
 
-       
+header .hero-button:hover {
+    background: #99f6e4;
+    transform: translateY(-3px);
+}
+
+    
 
         main {
             max-width: 850px;
@@ -73,10 +77,6 @@ header {
         dt { font-weight: bold; color: #0f766e; margin-top: 12px; }
         dd { margin-left: 0; }
 
-        fieldset {
-            border: 1px solid #99f6e4;
-            border-radius: 8px;
-        }
 
         input { accent-color: #0d9488; }
         meter { width: 100%; height: 24px; }
@@ -142,7 +142,33 @@ header a {
 header a:hover {
     color: #5eead4;
 }
+.project-card {
+    background: #f8fafc;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    border: 1px solid #ccfbf1;
+    transition: 0.3s ease;
+}
 
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(15, 118, 110, 0.12);
+}
+
+.project-card h3 {
+    margin-top: 0;
+}
+
+.project-link {
+    color: #0d9488;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.project-link:hover {
+    text-decoration: underline;
+}
     </style>
 </head>
 
@@ -155,30 +181,32 @@ header a:hover {
     <a href="#contact">Contact</a>
 </nav>
 
+
 <header id="home">
     <p>SOFTWARE ENGINEERING STUDENT</p>
 
-    <h1>Hello, I'm Yordanos Mesfin.</h1>
+    <h1>Hello, I'm <span>Yordanos Mesfin.</span></h1>
 
-    <h2>Learning Today. Building Tomorrow.</h2>
+    <h2>Future Software Developer</h2>
 
     <p>
-        I'm passionate about technology, creative problem-solving,
-        and turning ideas into meaningful digital experiences.
-        Every day is an opportunity to learn something new
-        and become a better developer.
+        I'm learning to turn creative ideas into technology.
+        Every project and every challenge helps me grow
+        into the developer I want to become.
     </p>
 
+    <a class="hero-button" href="#projects">
+        Explore My Projects →
+    </a>
+
     <p>
-        Explore my journey on
         <a href="https://github.com/yordi19-21"
            target="_blank"
            rel="noopener noreferrer">
-            GitHub Profile ↗
+            Visit my GitHub Profile ↗
         </a>
     </p>
 </header>
-
 
     <main>
         <section id="story">
@@ -267,16 +295,29 @@ header a:hover {
         
 <section id="projects">
     <h2>My Projects</h2>
-    <article>
+
+    <article class="project-card">
         <h3>Personal Portfolio</h3>
         <p>
-            My first web development project, built with HTML
-            and CSS to introduce myself and share my learning journey.
+            A personal website built with HTML and CSS
+            to introduce myself and showcase my learning journey.
         </p>
-        <p><strong>Status:</strong> In progress</p>
+        <p><strong>Technologies:</strong> HTML, CSS</p>
+        <a class="project-link" href="https://github.com/yordi19-21/my-portfolio"
+           target="_blank" rel="noopener noreferrer">
+            View on GitHub →
+        </a>
+    </article>
+
+    <article class="project-card">
+        <h3>Future Project</h3>
+        <p>
+            I'm preparing to build more projects as I improve
+            my programming and problem-solving skills.
+        </p>
+        <p><strong>Status:</strong> Coming soon</p>
     </article>
 </section>
-
 <section id="contact">
     <h2>📬 Let's Connect</h2>
 
