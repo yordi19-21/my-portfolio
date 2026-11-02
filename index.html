@@ -169,6 +169,28 @@ header a:hover {
 .project-link:hover {
     text-decoration: underline;
 }
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.skill {
+    background: #ccfbf1;
+    color: #115e59;
+    padding: 9px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.skill:hover {
+    background: #115e59;
+    color: white;
+    transform: scale(1.05);
+}
     </style>
 </head>
 
@@ -229,7 +251,21 @@ header a:hover {
                 challenging myself, and growing through experience.
             </p>
         </section>
+         <section id="skills">
+    <h2>My Skills</h2>
 
+    <p>Technologies and concepts I'm currently learning:</p>
+
+    <div class="skills-container">
+        <span class="skill">HTML</span>
+        <span class="skill">CSS</span>
+        <span class="skill">C++</span>
+        <span class="skill">Java</span>
+        <span class="skill">Database</span>
+        <span class="skill">Git & GitHub</span>
+        <span class="skill">Data Structures</span>
+    </div>
+</section>
         <section id="goals">
             <h2>🎯 My Goals</h2>
             <ul>
