@@ -191,13 +191,39 @@ header a:hover {
     color: white;
     transform: scale(1.05);
 }
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.about-content {
+    flex: 1;
+    min-width: 250px;
+}
+
+.about-status {
+    display: inline-block;
+    background: #ccfbf1;
+    color: #115e59;
+    padding: 7px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.about-content p {
+    line-height: 1.8;
+}
     </style>
 </head>
 
 <body>
 <nav aria-label="Main navigation">
     <a href="#home">Home</a>
-    <a href="#story">My Story</a>
+    <a href="#about">About</a>
     <a href="#toolkit">Toolkit</a>
     <a href="#goals">My Goals</a>
     <a href="#contact">Contact</a>
@@ -231,18 +257,29 @@ header a:hover {
 </header>
 
     <main>
-        <section id="story">
-            <h2>🌱 My Story</h2>
-            <p>
-                I'm a Software Engineering student who believes
-                that every big achievement starts with a small step.
-            </p>
-            <p>
-                I'm exploring web development, improving my programming
-                skills, and learning to turn creative ideas into real projects.
-            </p>
-        </section>
+       <section id="about">
+    <h2>About Me</h2>
 
+    <div class="about-container">
+        <div class="about-content">
+            <span class="about-status">● Open to Learning</span>
+
+            <h3>Building My Journey in Technology</h3>
+
+            <p>
+                Hello! I'm Yordanos Mesfin, a Software Engineering
+                student passionate about technology and problem-solving.
+                I enjoy learning programming, exploring new technologies,
+                and developing my skills through practical projects.
+            </p>
+
+            <p>
+                My goal is to become a skilled software developer
+                and create useful solutions that make a difference.
+            </p>
+        </div>
+    </div>
+</section>
         <section>
             <h2>💡 What Drives Me?</h2>
             <p>
