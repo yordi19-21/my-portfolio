@@ -265,6 +265,30 @@ footer {
     background: #111c2e;
     color: #cbd5e1;
 }
+/* Day 5: Back to Top Button */
+
+.back-to-top {
+    display: inline-block;
+    background: #14b8a6;
+    color: #0f172a;
+    padding: 10px 20px;
+    margin-top: 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.back-to-top:hover {
+    background: #5eead4;
+    transform: translateY(-4px);
+}
+
+/* Keyboard accessibility */
+a:focus-visible {
+    outline: 3px solid #5eead4;
+    outline-offset: 4px;
+}
     </style>
 </head>
 
@@ -469,6 +493,9 @@ footer {
     <footer>
         <p>Made with 💚 by Yordanos | One step at a time.</p>
         <p>learning, crating new digetal modern problem solving thing</p>
+        <a href="#home" class="back-to-top">
+    Back to Top ↑
+       </a>
     </footer>
 
 </body>
