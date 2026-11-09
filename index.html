@@ -4,379 +4,511 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yordanos Mesmin | Portfolio</title>
+
+    <title>Yordanos Mesfin | Portfolio</title>
 
     <style>
+        /* ===== GENERAL STYLES ===== */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: Arial, sans-serif;
             margin: 0;
-            background: #f0fdfa;
-            color: #1e293b;
+            background: #0b1120;
+            color: #e2e8f0;
             line-height: 1.7;
         }
 
-    
+        a:focus-visible {
+            outline: 3px solid #5eead4;
+            outline-offset: 4px;
+        }
 
-header {
-    background: linear-gradient(135deg, #0f172a, #115e59);
-    color: white;
-    text-align: center;
-    padding: 75px 20px;
-}
+        /* ===== NAVIGATION ===== */
 
-header h1 {
-    font-size: 2.8rem;
-    margin-bottom: 10px;
-}
+        nav {
+            background: #111c2e;
+            padding: 18px 15px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            border-bottom: 1px solid #26364e;
+        }
 
-header h2 {
-    margin-top: 5px;
-    color: #5eead4;
-}
+        nav a {
+            display: inline-block;
+            color: #cbd5e1;
+            text-decoration: none;
+            margin: 5px 12px;
+            font-weight: bold;
+            transition: 0.25s ease;
+        }
 
-header p {
-    color: #ccfbf1;
-}
+        nav a:hover {
+            color: #5eead4;
+            transform: translateY(-3px);
+        }
 
-header .hero-button {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 10px 22px;
-    background: #5eead4;
-    color: #0f172a;
-    text-decoration: none;
-    border-radius: 6px;
-    transition: 0.3s ease;
-}
+        /* ===== HERO SECTION ===== */
 
-header .hero-button:hover {
-    background: #99f6e4;
-    transform: translateY(-3px);
-}
+        header {
+            background: linear-gradient(135deg, #0f172a, #115e59);
+            color: white;
+            text-align: center;
+            padding: 75px 20px;
+        }
 
-    
+        header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+        }
+
+        header h1 span {
+            color: #5eead4;
+        }
+
+        header h2 {
+            margin-top: 5px;
+            color: #5eead4;
+        }
+
+        header p {
+            color: #ccfbf1;
+        }
+
+        header .hero-button {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 22px;
+            background: #5eead4;
+            color: #0f172a;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: 0.3s ease;
+        }
+
+        header .hero-button:hover {
+            background: #99f6e4;
+            transform: translateY(-3px);
+        }
+
+        header a:not(.hero-button) {
+            color: #99f6e4;
+            transition: 0.3s ease;
+        }
+
+        header a:not(.hero-button):hover {
+            color: white;
+        }
+
+        /* ===== MAIN CONTENT ===== */
 
         main {
-            max-width: 850px;
-            margin: 30px auto;
-            padding: 0 18px;
+            max-width: 1100px;
+            margin: 35px auto;
+            padding: 0 20px;
         }
 
         section {
-            background: white;
-            padding: 22px;
-            margin-bottom: 22px;
+            background: #111c2e;
+            color: #cbd5e1;
+            padding: 25px;
+            margin-bottom: 25px;
             border-radius: 12px;
-            border-left: 4px solid #0d9488;
-            box-shadow: 0 3px 12px #0f766e12;
+            border: 1px solid #26364e;
+            border-left: 4px solid #14b8a6;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+            transition: transform 0.25s ease,
+                        box-shadow 0.25s ease;
         }
 
-        h2, h3 { color: #0f766e; }
-        header h2 { color: white; }
+        section:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(20, 184, 166, 0.08);
+        }
 
-        dt { font-weight: bold; color: #0f766e; margin-top: 12px; }
-        dd { margin-left: 0; }
+        section h2,
+        section h3 {
+            color: #5eead4;
+        }
 
+        section p,
+        section li,
+        section dd {
+            color: #cbd5e1;
+        }
 
-        input { accent-color: #0d9488; }
-        meter { width: 100%; height: 24px; }
+        /* ===== ABOUT SECTION ===== */
+
+        .about-container {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .about-content {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .about-status {
+            display: inline-block;
+            background: #134e4a;
+            color: #99f6e4;
+            padding: 7px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+
+        /* ===== SKILLS SECTION ===== */
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 15px;
+        }
+
+        .skill {
+            background: #134e4a;
+            color: #99f6e4;
+            padding: 9px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            transition: 0.3s ease;
+        }
+
+        .skill:hover {
+            background: #0f766e;
+            color: white;
+            transform: scale(1.05);
+        }
+
+        /* ===== PROJECTS SECTION ===== */
+
+        .project-card {
+            background: #172338;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            border: 1px solid #26364e;
+            transition: 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .project-card h3 {
+            margin-top: 0;
+        }
+
+        .project-link {
+            color: #5eead4;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .project-link:hover {
+            text-decoration: underline;
+        }
+
+        /* ===== TOOLKIT SECTION ===== */
+
+        dt {
+            font-weight: bold;
+            color: #5eead4;
+            margin-top: 12px;
+        }
+
+        dd {
+            margin-left: 0;
+        }
+
+        fieldset {
+            border: 1px solid #334155;
+            border-radius: 8px;
+        }
+
+        legend {
+            color: #5eead4;
+        }
+
+        input {
+            accent-color: #14b8a6;
+        }
+
+        meter {
+            width: 100%;
+            height: 24px;
+        }
 
         mark {
-            background: #ccfbf1;
-            color: #115e59;
+            background: #134e4a;
+            color: #99f6e4;
             padding: 3px 6px;
             border-radius: 4px;
         }
 
+        address {
+            font-style: normal;
+        }
+
+        /* ===== FOOTER ===== */
+
         footer {
             text-align: center;
-            padding: 20px;
-            background: #115e59;
-            color: white;
+            padding: 25px 20px;
+            background: #111c2e;
+            color: #cbd5e1;
+            border-top: 1px solid #26364e;
         }
+
+        .back-to-top {
+            display: inline-block;
+            background: #14b8a6;
+            color: #0f172a;
+            padding: 10px 20px;
+            margin-top: 15px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s ease;
+        }
+
+        .back-to-top:hover {
+            background: #5eead4;
+            transform: translateY(-4px);
+        }
+
+        /* ===== MOBILE RESPONSIVENESS ===== */
 
         @media (max-width: 600px) {
-            header { padding: 30px 15px; }
-            header h1 { font-size: 1.9rem; }
-            section { padding: 16px; }
+            nav {
+                padding: 12px 8px;
+            }
+
+            nav a {
+                margin: 5px 7px;
+                font-size: 0.9rem;
+            }
+
+            header {
+                padding: 45px 15px;
+            }
+
+            header h1 {
+                font-size: 1.9rem;
+            }
+
+            main {
+                padding: 0 12px;
+            }
+
+            section {
+                padding: 18px;
+            }
         }
-        
-nav {
-    background: #134e4a;
-    padding: 12px;
-    text-align: center;
-}
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 12px;
-}
-nav a:hover {
-    color: #99f6e4;
+        /* Day 6: Two-column hero layout */
+
+.hero-container {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    text-align: left;
 }
 
-/* Smooth interactive effects */
-nav a {
-    display: inline-block;
-    transition: color 0.25s ease, transform 0.25s ease;
+.hero-text {
+    flex: 1;
 }
 
-nav a:hover {
-    color: #99f6e4;
-    transform: translateY(-3px);
+.hero-text p {
+    max-width: 600px;
 }
 
-section {
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
+.hero-card {
+    flex: 0 1 320px;
+    background: rgba(15, 23, 42, 0.65);
+    border: 1px solid #2dd4bf;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
-section:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 22px #0f766e20;
-}
-
-header a {
-    transition: color 0.25s ease;
-}
-
-header a:hover {
+.hero-card h3 {
     color: #5eead4;
-}
-.project-card {
-    background: #f8fafc;
-    padding: 20px;
-    margin: 20px 0;
-    border-radius: 10px;
-    border: 1px solid #ccfbf1;
-    transition: 0.3s ease;
-}
-
-.project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(15, 118, 110, 0.12);
-}
-
-.project-card h3 {
     margin-top: 0;
 }
 
-.project-link {
-    color: #0d9488;
-    font-weight: bold;
-    text-decoration: none;
+.hero-card p {
+    color: #cbd5e1;
 }
 
-.project-link:hover {
-    text-decoration: underline;
-}
-.skills-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    margin-top: 15px;
-}
-
-.skill {
-    background: #ccfbf1;
-    color: #115e59;
-    padding: 9px 16px;
-    border-radius: 20px;
-    font-size: 0.9rem;
-    font-weight: bold;
-    transition: 0.3s ease;
-}
-
-.skill:hover {
-    background: #115e59;
-    color: white;
-    transform: scale(1.05);
-}
-.about-container {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    flex-wrap: wrap;
-}
-
-.about-content {
-    flex: 1;
-    min-width: 250px;
-}
-
-.about-status {
+.hero-label {
     display: inline-block;
-    background: #ccfbf1;
-    color: #115e59;
-    padding: 7px 14px;
-    border-radius: 20px;
-    font-size: 0.85rem;
-    font-weight: bold;
-    margin-bottom: 12px;
-}
-
-.about-content p {
-    line-height: 1.8;
-}
-/* Modern Dark Theme */
-
-body {
-    background: #0b1120;
-    color: #e2e8f0;
-}
-
-nav {
-    background: #111c2e;
-}
-
-nav a {
-    color: #cbd5e1;
-}
-
-section {
-    background: #111c2e;
-    color: #cbd5e1;
-    border-left-color: #14b8a6;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
-}
-
-section h2,
-section h3 {
-    color: #5eead4;
-}
-
-section p,
-section li,
-section dd {
-    color: #cbd5e1;
-}
-
-.project-card {
-    background: #172338;
-    border-color: #26364e;
-}
-
-.skill,
-.about-status {
     background: #134e4a;
     color: #99f6e4;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
 }
 
-footer {
-    background: #111c2e;
-    color: #cbd5e1;
-}
-/* Day 5: Back to Top Button */
+@media (max-width: 700px) {
+    .hero-container {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 25px;
+    }
 
-.back-to-top {
-    display: inline-block;
-    background: #14b8a6;
-    color: #0f172a;
-    padding: 10px 20px;
-    margin-top: 15px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s ease;
-}
-
-.back-to-top:hover {
-    background: #5eead4;
-    transform: translateY(-4px);
-}
-
-/* Keyboard accessibility */
-a:focus-visible {
-    outline: 3px solid #5eead4;
-    outline-offset: 4px;
+    .hero-card {
+        flex-basis: auto;
+    }
 }
     </style>
 </head>
 
 <body>
-<nav aria-label="Main navigation">
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#toolkit">Toolkit</a>
-    <a href="#goals">My Goals</a>
-    <a href="#contact">Contact</a>
-</nav>
 
+    <!-- NAVIGATION -->
+    <nav aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#goals">Goals</a>
+        <a href="#toolkit">Toolkit</a>
+        <a href="#contact">Contact</a>
+    </nav>
 
-<header id="home">
-    <p>SOFTWARE ENGINEERING STUDENT</p>
+    <!-- HERO SECTION -->
+   <header id="home">
 
-    <h1>Hello, I'm <span>Yordanos Mesfin.</span></h1>
+    <div class="hero-container">
 
-    <h2>Future Software Developer</h2>
+        <div class="hero-text">
 
-    <p>
-        I'm learning to turn creative ideas into technology.
-        Every project and every challenge helps me grow
-        into the developer I want to become.
-    </p>
+            <p>SOFTWARE ENGINEERING STUDENT</p>
 
-    <a class="hero-button" href="#projects">
-        Explore My Projects →
-    </a>
+            <h1>Hello, I'm <span>Yordanos Mesfin.</span></h1>
 
-    <p>
-        <a href="https://github.com/yordi19-21"
-           target="_blank"
-           rel="noopener noreferrer">
-            Visit my GitHub Profile ↗
-        </a>
-    </p>
-</header>
-
-    <main>
-       <section id="about">
-    <h2>About Me</h2>
-
-    <div class="about-container">
-        <div class="about-content">
-            <span class="about-status">● Open to Learning</span>
-
-            <h3>Building My Journey in Technology</h3>
+            <h2>Future Software Developer</h2>
 
             <p>
-                Hello! I'm Yordanos Mesfin, a Software Engineering
-                student passionate about technology and problem-solving.
-                I enjoy learning programming, exploring new technologies,
-                and developing my skills through practical projects.
+                I'm learning to turn creative ideas into technology.
+                Every project and every challenge helps me grow
+                into the developer I want to become.
             </p>
 
+            <a class="hero-button" href="#projects">
+                Explore My Projects →
+            </a>
+
             <p>
-                My goal is to become a skilled software developer
-                and create useful solutions that make a difference.
+                <a href="https://github.com/yordi19-21"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Visit my GitHub Profile ↗
+                </a>
             </p>
+
         </div>
+
+        <div class="hero-card">
+
+            <span class="hero-label">MY DEVELOPER JOURNEY</span>
+
+            <h3>Learning. Building. Growing.</h3>
+
+            <p>
+                Currently exploring programming, web development,
+                and problem-solving.
+            </p>
+
+            <p><strong>Focus:</strong> Software Engineering</p>
+            <p><strong>Learning:</strong> HTML & CSS</p>
+            <p><strong>Goal:</strong> Build useful projects</p>
+
+        </div>
+
     </div>
-</section>
-        <section>
+
+</header>
+    <main>
+
+        <!-- ABOUT -->
+        <section id="about">
+            <h2>About Me</h2>
+
+            <div class="about-container">
+                <div class="about-content">
+                    <span class="about-status">● Open to Learning</span>
+
+                    <h3>Building My Journey in Technology</h3>
+
+                    <p>
+                        Hello! I'm Yordanos Mesfin, a Software Engineering
+                        student passionate about technology and problem-solving.
+                        I enjoy learning programming, exploring new technologies,
+                        and developing my skills through practical projects.
+                    </p>
+
+                    <p>
+                        My goal is to become a skilled software developer
+                        and create useful solutions that make a difference.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- MOTIVATION -->
+        <section id="motivation">
             <h2>💡 What Drives Me?</h2>
+
             <p>
                 I'm curious about technology and how it can solve
                 real-world problems. I enjoy learning new things,
                 challenging myself, and growing through experience.
             </p>
         </section>
-         <section id="skills">
-    <h2>My Skills</h2>
 
-    <p>Technologies and concepts I'm currently learning:</p>
+        <!-- SKILLS -->
+        <section id="skills">
+            <h2>My Skills</h2>
 
-    <div class="skills-container">
-        <span class="skill">HTML</span>
-        <span class="skill">CSS</span>
-        <span class="skill">C++</span>
-        <span class="skill">Java</span>
-        <span class="skill">Database</span>
-        <span class="skill">Git & GitHub</span>
-        <span class="skill">Data Structures</span>
-    </div>
-</section>
+            <p>Technologies and concepts I'm currently learning:</p>
+
+            <div class="skills-container">
+                <span class="skill">HTML</span>
+                <span class="skill">CSS</span>
+                <span class="skill">C++</span>
+                <span class="skill">Java</span>
+                <span class="skill">Database</span>
+                <span class="skill">Git & GitHub</span>
+                <span class="skill">Data Structures</span>
+            </div>
+        </section>
+
+        <!-- GOALS -->
         <section id="goals">
             <h2>🎯 My Goals</h2>
+
             <ul>
                 <li>Become a skilled software developer.</li>
                 <li>Build projects that solve real problems.</li>
@@ -385,14 +517,17 @@ a:focus-visible {
             </ul>
         </section>
 
+        <!-- TOOLKIT -->
         <section id="toolkit">
             <h2>🛠️ My Developer Toolkit</h2>
+
             <p>
                 These are some of the tools I'm exploring on my journey.
             </p>
 
             <article>
                 <h3>Tools I'm Learning</h3>
+
                 <dl>
                     <dt>Visual Studio Code</dt>
                     <dd>My code editor for writing and editing HTML.</dd>
@@ -407,20 +542,55 @@ a:focus-visible {
 
             <article>
                 <h3>My HTML Checklist</h3>
+
                 <fieldset>
                     <legend>Skills I'm practicing</legend>
-                    <p><label><input type="checkbox" checked> HTML document structure</label></p>
-                    <p><label><input type="checkbox" checked> Headings, paragraphs, and links</label></p>
-                    <p><label><input type="checkbox"> Forms and input elements</label></p>
-                    <p><label><input type="checkbox"> Tables and accessibility</label></p>
+
+                    <p>
+                        <label>
+                            <input type="checkbox" checked>
+                            HTML document structure
+                        </label>
+                    </p>
+
+                    <p>
+                        <label>
+                            <input type="checkbox" checked>
+                            Headings, paragraphs, and links
+                        </label>
+                    </p>
+
+                    <p>
+                        <label>
+                            <input type="checkbox">
+                            Forms and input elements
+                        </label>
+                    </p>
+
+                    <p>
+                        <label>
+                            <input type="checkbox">
+                            Tables and accessibility
+                        </label>
+                    </p>
                 </fieldset>
             </article>
 
             <article>
                 <h3>📈 My Learning Progress</h3>
+
                 <p>My confidence with HTML fundamentals:</p>
-                <meter min="0" max="10" value="4">4 out of 10</meter>
-                <p><small>I'll update this rating as my understanding grows.</small></p>
+
+                <meter min="0" max="10" value="4">
+                    4 out of 10
+                </meter>
+
+                <p>
+                    <small>
+                        I'll update this rating as my understanding grows.
+                    </small>
+                </p>
+
                 <p>
                     <strong>Learning since:</strong>
                     <time datetime="2026-10-19">October 19, 2026</time>
@@ -428,74 +598,98 @@ a:focus-visible {
             </article>
         </section>
 
-        <section>
+        <!-- DEVELOPER FOCUS -->
+        <section id="focus">
             <h2>🚀 My Developer Focus</h2>
+
             <p>
-                I'm studying <abbr title="Software Engineering">SE</abbr>
+                I'm studying
+                <abbr title="Software Engineering">SE</abbr>
                 and improving my coding skills every day.
             </p>
-            <p>My focus: <mark>writing clean and meaningful HTML</mark>.</p>
-            <p><strong>My mindset:</strong> Learn it, practice it, build it.</p>
+
+            <p>
+                My focus:
+                <mark>writing clean and meaningful HTML</mark>.
+            </p>
+
+            <p>
+                <strong>My mindset:</strong>
+                Learn it, practice it, build it.
+            </p>
         </section>
-        
-<section id="projects">
-    <h2>My Projects</h2>
 
-    <article class="project-card">
-        <h3>Personal Portfolio</h3>
-        <p>
-            A personal website built with HTML and CSS
-            to introduce myself and showcase my learning journey.
-        </p>
-        <p><strong>Technologies:</strong> HTML, CSS</p>
-        <a class="project-link" href="https://github.com/yordi19-21/my-portfolio"
-           target="_blank" rel="noopener noreferrer">
-            View on GitHub →
-        </a>
-    </article>
+        <!-- PROJECTS -->
+        <section id="projects">
+            <h2>My Projects</h2>
 
-    <article class="project-card">
-        <h3>Future Project</h3>
-        <p>
-            I'm preparing to build more projects as I improve
-            my programming and problem-solving skills.
-        </p>
-        <p><strong>Status:</strong> Coming soon</p>
-    </article>
-</section>
-<section id="contact">
-    <h2>📬 Let's Connect</h2>
+            <article class="project-card">
+                <h3>Personal Portfolio</h3>
 
-    <p>
-        I'm learning, building, and preparing for future opportunities.
-        You can explore my work on GitHub.
-    </p>
+                <p>
+                    A personal website built with HTML and CSS
+                    to introduce myself and showcase my learning journey.
+                </p>
 
-    <address>
-        <p>
-            GitHub:
-            <a href="https://github.com/yordi19-21"
-               target="_blank"
-               rel="noopener noreferrer">
-                Visit my GitHub profile
-            </a>
-        </p>
-    </address>
+                <p><strong>Technologies:</strong> HTML, CSS</p>
 
-    <p>
-        <strong>Currently:</strong>
-        <mark>Learning and growing one step at a time.</mark>
-    </p>
-</section>
+                <a class="project-link"
+                   href="https://github.com/yordi19-21/my-portfolio"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    View on GitHub →
+                </a>
+            </article>
+
+            <article class="project-card">
+                <h3>Future Project</h3>
+
+                <p>
+                    I'm preparing to build more projects as I improve
+                    my programming and problem-solving skills.
+                </p>
+
+                <p><strong>Status:</strong> Coming soon</p>
+            </article>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact">
+            <h2>📬 Let's Connect</h2>
+
+            <p>
+                I'm learning, building, and preparing for future opportunities.
+                You can explore my work on GitHub.
+            </p>
+
+            <address>
+                <p>
+                    GitHub:
+                    <a href="https://github.com/yordi19-21"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Visit my GitHub profile
+                    </a>
+                </p>
+            </address>
+
+            <p>
+                <strong>Currently:</strong>
+                <mark>Learning and growing one step at a time.</mark>
+            </p>
+        </section>
 
     </main>
 
+    <!-- FOOTER -->
     <footer>
         <p>Made with 💚 by Yordanos | One step at a time.</p>
-        <p>learning, crating new digetal modern problem solving thing</p>
+
+        <p>Learning, creating, and solving problems through technology.</p>
+
         <a href="#home" class="back-to-top">
-    Back to Top ↑
-       </a>
+            Back to Top ↑
+        </a>
     </footer>
 
 </body>
