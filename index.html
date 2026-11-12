@@ -381,6 +381,29 @@
         flex-basis: auto;
     }
 }
+/* Day 7: Project technology tags */
+
+.project-technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.tech-tag {
+    background: #134e4a;
+    color: #99f6e4;
+    padding: 5px 12px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    border: 1px solid #0f766e;
+    transition: 0.3s ease;
+}
+
+.tech-tag:hover {
+    background: #14b8a6;
+    color: #0f172a;
+}
     </style>
 </head>
 
@@ -624,33 +647,27 @@
             <h2>My Projects</h2>
 
             <article class="project-card">
-                <h3>Personal Portfolio</h3>
+    <h3>Personal Portfolio</h3>
 
-                <p>
-                    A personal website built with HTML and CSS
-                    to introduce myself and showcase my learning journey.
-                </p>
+    <p>
+        A personal website built to introduce myself,
+        showcase my skills, and share my learning journey.
+    </p>
 
-                <p><strong>Technologies:</strong> HTML, CSS</p>
+    <div class="project-technologies">
+        <span class="tech-tag">HTML</span>
+        <span class="tech-tag">CSS</span>
+        <span class="tech-tag">Git</span>
+        <span class="tech-tag">GitHub</span>
+    </div>
 
-                <a class="project-link"
-                   href="https://github.com/yordi19-21/my-portfolio"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                    View on GitHub →
-                </a>
-            </article>
-
-            <article class="project-card">
-                <h3>Future Project</h3>
-
-                <p>
-                    I'm preparing to build more projects as I improve
-                    my programming and problem-solving skills.
-                </p>
-
-                <p><strong>Status:</strong> Coming soon</p>
-            </article>
+    <a class="project-link"
+       href="https://github.com/yordi19-21/my-portfolio"
+       target="_blank"
+       rel="noopener noreferrer">
+        View on GitHub →
+    </a>
+</article>
         </section>
 
         <!-- CONTACT -->
